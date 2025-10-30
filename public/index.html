@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arcade - Tarjetas y Créditos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="container">
+    <aside id="sidebar">
+      <h2>Tarjetas</h2>
+      <div id="cards-list" class="cards-list"></div>
+
+      <div class="card-form">
+        <h3>Registrar tarjeta</h3>
+        <input id="new-holder" placeholder="Nombre titular" />
+        <input id="new-number" placeholder="Número tarjeta" />
+        <input id="new-initial" type="number" step="1" placeholder="Saldo inicial (Bs)" />
+        <button id="create-card-btn">Crear tarjeta</button>
+      </div>
+
+      <div class="small-actions">
+        <button id="refresh-cards">Actualizar</button>
+        <button id="reset-db" class="danger">Reiniciar BD</button>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header>
+        <h1>Arcade - Administrador de Créditos</h1>
+        <div id="selected-info" class="selected-info">Seleccione una tarjeta</div>
+      </header>
+
+      <section id="dashboard" class="panel">
+        <div class="balance-box">
+          <div class="label">Saldo</div>
+          <div id="balance" class="balance">Bs 0.00</div>
+        </div>
+
+        <div class="actions">
+          <div class="recharge">
+            <input id="recharge-amount" type="number" step="1" placeholder="Monto a recargar" />
+            <input id="recharge-note" placeholder="Nota (opcional)" />
+            <button id="do-recharge">Recargar</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="games" class="panel">
+        <h2>Juegos</h2>
+        <div id="games-list" class="games-list"></div>
+      </section>
+
+      <section id="history" class="panel">
+        <h2>Historial (tarjeta seleccionada)</h2>
+        <div id="transactions-list" class="transactions-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
